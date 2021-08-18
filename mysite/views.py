@@ -6,6 +6,9 @@ from . import models
 current_user_count = 0
 signed_in_user = ""
 
+'''
+Lets see if these changes stay in main branch or not
+'''
 
 @csrf_exempt
 def login(request):
