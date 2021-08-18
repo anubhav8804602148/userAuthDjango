@@ -1,0 +1,106 @@
+Watching for file changes with StatReloader
+[17/Aug/2021 13:59:14] "GET /? HTTP/1.1" 200 2343
+[17/Aug/2021 13:59:27] "GET /? HTTP/1.1" 200 2343
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 13:58:46
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+[17/Aug/2021 14:00:43] "GET /? HTTP/1.1" 200 2343
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:00:19
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:01:36
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:01:46
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+[17/Aug/2021 14:02:01] "GET /? HTTP/1.1" 200 2343
+[17/Aug/2021 14:02:27] "GET /? HTTP/1.1" 200 2343
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:01:57
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\models.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:03:45
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\urls.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:03:48
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:03:52
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+D:\my_projects\LearnersPackage\Python\DjangoTutorial\mysite\mysite\views.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:03:54
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+[17/Aug/2021 14:04:26] "GET /? HTTP/1.1" 200 2343
+[17/Aug/2021 14:04:54] "GET /? HTTP/1.1" 200 2343
+Performing system checks...
+
+System check identified no issues (0 silenced).
+August 17, 2021 - 14:04:11
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+August 17, 2021 - 14:06:19
+Django version 3.2.6, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.

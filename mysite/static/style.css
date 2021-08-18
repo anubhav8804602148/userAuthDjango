@@ -1,0 +1,36 @@
+body{
+    background-image:url("cloud.jpg");
+}
+#register_user{
+    color: white;
+    font: bold;
+    position: relative;
+    left: 30%;
+    top: 100px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color:rgb(153, 161, 172);
+}
+#login_user{
+    color: white;
+    font: bold;
+    position: relative;
+    left: 30%;
+    top: 100px;
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color:rgb(153, 161, 172);
+}
+.list_table{
+    position: relative;
+    top: 100px;
+    left: 30%;
+}

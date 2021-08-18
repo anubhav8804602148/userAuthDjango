@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en-US">
+        <head>         
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>       
+            {% load static %}
+            <link rel="stylesheet" href="{% static 'style.css' %}">    
+        </head>    
+        <body>
+            
+            <h1><center>Login | Welcome</center></h1>
+            <form id="login_user" onsubmit="get_login()">
+                <table>
+                    <tr><td>Email Address </td><td> <input id="mail" placeholder="Email" type="email" required></td></tr>
+                    <tr><td>Password</td><td><input id="password" type="password" placeholder="Password" required></td></tr>
+                </table>
+                    <br><input type="submit">
+
+            </form>
+        </body>
+        
+    <script>
+        var get_login = function(){
+
+            var user_data = {
+                'mail' : $("#mail").val(),
+                'password' : $("#password").val(),
+            }
+            alert("Logging in . . . ");
+            $.ajax({                
+                type : 'POST',
+                url : '/login/',
+                data : JSON.stringify(user_data),
+                contentType : "application/json; charset=utf-8",
+                dataType : "json",
+            })
+        }
+    </script>
+    </html>

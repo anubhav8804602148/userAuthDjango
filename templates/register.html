@@ -1,0 +1,55 @@
+<!Doctype HTML>
+<html lang="en-US">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+        <title>
+            Register | Book World
+        </title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+            
+        <h1><center>SignUp or Register</center></h1>
+        Current User Count : {{data}}
+        <form id="register_user" onsubmit="post_data()">
+            <table>
+                <tr><td>Name </td><td> <input id="name" type="text" placeholder="Enter Name" required></td></tr>
+                <tr><td>Age </td><td> <input id="age" type="number" placeholder="Enter Age" required></td></tr>
+                <tr><td>Date Of Birth </td><td> <input id="dob" placeholder="Enter your date of birth" type="date" required></td></tr>
+                <tr><td>Address </td><td> <input id="address" placeholder="Enter Address" type="text"></td></tr>
+                <tr><td>Email Address </td><td> <input id="mail" placeholder="Enter your email Id" type="email" required></td></tr>
+                <tr><td>Password</td><td><input id="pass1" type="password" placeholder="Choose a strong password" required></td></tr>
+                <tr><td>Confirm Password</td><td><input id="pass2" type="password" placeholder="Retype your password" required></td></tr>
+                <tr><td>Write Access Required</td><td><input id="access" type="checkbox"><font size="1">This would require approval</font></td></tr>
+            </table>
+                <br><input type="submit">
+
+        </form>
+    </body>
+    <style>
+    </style>
+    <script>
+        var post_data = function(){
+
+            var user_data = {
+                'name'  : $("#name").val(),
+                'age' : $("#age").val(),
+                'address' : $("#address").val(),
+                'dob' : $("#dob").val(),
+                'mail' : $("#mail").val(),
+                'pass1' : $("#pass1").val(),
+                'pass2' : $("#pass2").val(),
+                'access' : $("#access").val(),
+            }
+            alert("Request sent. Please login after few minutes");
+            $.ajax({                
+                type : 'POST',
+                url : '/register/',
+                data : JSON.stringify(user_data),
+                contentType : "application/json; charset=utf-8",
+                dataType : "json",
+            })
+        }
+    </script>
+</html>
