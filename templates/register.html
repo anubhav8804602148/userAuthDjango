@@ -11,7 +11,7 @@
     <body>
             
         <h1><center>SignUp or Register</center></h1>
-        Current User Count : {{data}}
+        <p style="color:white;text-align: left;">Current User Count : {{data}}</p><p style="color:white;text-align: right;">Welcome {{user}}</p>
         <form id="register_user" onsubmit="post_data()">
             <table>
                 <tr><td>Name </td><td> <input id="name" type="text" placeholder="Enter Name" required></td></tr>
@@ -24,8 +24,9 @@
                 <tr><td>Write Access Required</td><td><input id="access" type="checkbox"><font size="1">This would require approval</font></td></tr>
             </table>
                 <br><input type="submit">
-
+            <p>{{mess}}</p>
         </form>
+
     </body>
     <style>
     </style>

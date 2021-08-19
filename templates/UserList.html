@@ -3,11 +3,14 @@
     <head>                
         {% load static %}
         <link rel="stylesheet" href="{% static 'style.css' %}">    
-    </head>    
-    <table class="list_table" border="5" > 
-        <th id="head_row"><td>Name</td><td>Age</td><td>Date of Birth</td><td>Email Id</td></th>
-        {% for users in userList %}
-            <tr><td>{{users.id}}</td><td>{{users.name}}</td><td>{{users.age}}</td><td>{{users.dob}}</td><td>{{users.mail}}</td></tr>
-        {% endfor %}
-    </table>
+    </head>   
+    <body>
+        <p style="color:white;text-align: left;">Current User Count : {{data}}</p><p style="color:white;text-align: right;">Welcome {{user}}</p>
+        <table class="list_table" border="5" > 
+            <th id="head_row"><td>Name</td><td>Age</td><td>Date of Birth</td><td>Email Id</td></th>
+            {% for users in userList %}
+                <tr><td>{{users.id}}</td><td>{{users.name}}</td><td>{{users.age}}</td><td>{{users.dob}}</td><td>{{users.mail}}</td></tr>
+            {% endfor %}
+        </table>
+    </body> 
 </html>

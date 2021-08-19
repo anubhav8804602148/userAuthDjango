@@ -1,20 +1,42 @@
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt;
 import json
 from . import models
+import smtplib
+
 
 current_user_count = 0
 signed_in_user = ""
+logged_in_user = ""
 
-'''
-Lets see if these changes stay in main branch or not
-'''
+def send_mail(name, mail, access, rid):
+     
+    sender = 'anubhav8804602148@gmail.com'
+    receivers = ['anubhav8804602148@gmail.com']
+
+    message = """From: From Person <from@fromdomain.com>
+    To: To Person <to@todomain.com>
+    Subject: SMTP e-mail test
+
+    This is a test e-mail message.
+    """
+
+    # try:
+    #     smtpObj = smtplib.SMTP('localhost')
+    #     smtpObj.sendmail(sender, receivers, message)         
+    #     print ("Successfully sent email")
+    # except smtplib.SMTPException:
+    #     print ("Error: unable to send email")
+
 
 @csrf_exempt
 def login(request):
+    logged_in_user = open("logged_in.txt").read().split("\n")
     print("Inside login")
     if request.method=='POST':
-        print("inside post")
+
+        print(len(request.session))
         data = json.loads(request.read())
         userid = data['mail']
         password = data['password']
@@ -57,9 +79,15 @@ def request_list(request):
         })
     return render(request, 'requestList.html', context={'requestList':res_list})
 
+def invalid(request):
+    return HttpResponse("Invalid Password")
 
+
+mess = ""
 @csrf_exempt
 def register(request):
+    global mess
+    mess = ''
     global current_user_count
     if request.method=='POST':
         data = json.loads(request.read())
@@ -68,12 +96,9 @@ def register(request):
         address = data['address']
         dob = data['dob']
         age = data['age']
-        trid =  models.AccRequest.objects.all()
-        rid = 0
-        try:
-            rid = trid.order_by("id")[0].id + 1
-        except:
-            pass
+        rid1 = models.User.objects.filter().order_by('id').last().id
+        rid2 = models.AccRequest.objects.filter().order_by('id').last().id
+        rid = rid1+1 if rid1 > rid2 else rid2 + 1
         pass1 = data['pass1']
         pass2 = data['pass2']
         access = data['access']
@@ -81,11 +106,19 @@ def register(request):
             if access=='on':
                 req = models.AccRequest(rid, name, age, dob, mail, address, pass1, access)
                 req.save()
+                send_mail(name, mail, access, rid)
             else:
                 req = models.User(rid, name, age, dob, mail, address, pass1, access)
                 req.save()
+                send_mail(name, mail, access, rid)
         else:
-            print("Invalid")
-            return render(request, 'invalid.html')
-        
-    return render(request, 'register.html', context={'data':current_user_count})
+            mess = "Passwords do not match"
+            return redirect('invalid')
+
+    return render(request, 'register.html', context={
+        'data':models.User.objects.count,
+        'mess' : mess
+    })
+    
+def invalid(request):
+    return HttpResponse("Invalid")
